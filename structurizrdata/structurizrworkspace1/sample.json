@@ -1,0 +1,152 @@
+{
+  "id" : 1,
+  "name" : "Name",
+  "description" : "Description",
+  "lastModifiedDate" : "2023-08-12T16:11:13Z",
+  "lastModifiedAgent" : "structurizr-javascript",
+  "properties" : {
+    "structurizr.dsl" : "d29ya3NwYWNlIHsKCiAgICBtb2RlbCB7CiAgICAgICAgY2xpbmljRW1wbG95ZWUgPSBwZXJzb24gIkNsaW5pYyBFbXBsb3llZSIKICAgICAgICBzcHJpbmdQZXRDbGluaWMgPSBzb2Z0d2FyZVN5c3RlbSAiU3ByaW5nIFBldENsaW5pYyJ7CiAgICAgICAgICAgIHdlYkFwcGxpY2F0aW9uID0gY29udGFpbmVyICJXZWIgQXBwbGljYXRpb24iCiAgICAgICAgICAgIGRhdGFiYXNlID0gY29udGFpbmVyICJEYXRhYmFzZSIKICAgICAgICB9CgogICAgICAgIGNsaW5pY0VtcGxveWVlIC0+IHdlYkFwcGxpY2F0aW9uICJVc2VzIgogICAgICAgIHdlYkFwcGxpY2F0aW9uIC0+IGRhdGFiYXNlICJSZWFkcyBmcm9tIGFuZCB3cml0ZXMgdG8iCiAgICB9CgogICAgdmlld3MgewogICAgICAgIHN5c3RlbUNvbnRleHQgc3ByaW5nUGV0Q2xpbmljIHsKICAgICAgICAgICAgaW5jbHVkZSAqCiAgICAgICAgICAgIGF1dG9sYXlvdXQKICAgICAgICB9CgogICAgICAgIGNvbnRhaW5lciBzcHJpbmdQZXRDbGluaWMgewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b2xheW91dAogICAgICAgIH0KICAgfQogICAgCn0K"
+  },
+  "configuration" : { },
+  "model" : {
+    "people" : [ {
+      "id" : "1",
+      "tags" : "Element,Person",
+      "properties" : {
+        "structurizr.dsl.identifier" : "clinicemployee"
+      },
+      "name" : "Clinic Employee",
+      "relationships" : [ {
+        "id" : "6",
+        "sourceId" : "1",
+        "destinationId" : "2",
+        "description" : "Uses",
+        "linkedRelationshipId" : "5"
+      }, {
+        "id" : "5",
+        "tags" : "Relationship",
+        "properties" : {
+          "structurizr.dsl.identifier" : "a30a5e9a-37b9-4806-8657-e6e1f660511a"
+        },
+        "sourceId" : "1",
+        "destinationId" : "3",
+        "description" : "Uses"
+      } ],
+      "location" : "Unspecified"
+    } ],
+    "softwareSystems" : [ {
+      "id" : "2",
+      "tags" : "Element,Software System",
+      "properties" : {
+        "structurizr.dsl.identifier" : "springpetclinic"
+      },
+      "name" : "Spring PetClinic",
+      "location" : "Unspecified",
+      "containers" : [ {
+        "id" : "3",
+        "tags" : "Element,Container",
+        "properties" : {
+          "structurizr.dsl.identifier" : "webapplication"
+        },
+        "name" : "Web Application",
+        "relationships" : [ {
+          "id" : "7",
+          "tags" : "Relationship",
+          "properties" : {
+            "structurizr.dsl.identifier" : "05137fc5-61f5-43c5-bed5-256c55b29b7f"
+          },
+          "sourceId" : "3",
+          "destinationId" : "4",
+          "description" : "Reads from and writes to"
+        } ],
+        "documentation" : { }
+      }, {
+        "id" : "4",
+        "tags" : "Element,Container",
+        "properties" : {
+          "structurizr.dsl.identifier" : "database"
+        },
+        "name" : "Database",
+        "documentation" : { }
+      } ],
+      "documentation" : { }
+    } ]
+  },
+  "documentation" : { },
+  "views" : {
+    "systemContextViews" : [ {
+      "key" : "SystemContext-001",
+      "order" : 1,
+      "softwareSystemId" : "2",
+      "dimensions" : {
+        "width" : 990,
+        "height" : 1300
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "enterpriseBoundaryVisible" : true,
+      "relationships" : [ {
+        "id" : "6"
+      } ],
+      "elements" : [ {
+        "id" : "1",
+        "x" : 270,
+        "y" : 199
+      }, {
+        "id" : "2",
+        "x" : 270,
+        "y" : 799
+      } ]
+    } ],
+    "containerViews" : [ {
+      "key" : "Container-001",
+      "order" : 2,
+      "softwareSystemId" : "2",
+      "paperSize" : "A5_Portrait",
+      "dimensions" : {
+        "width" : 1108,
+        "height" : 2020
+      },
+      "automaticLayout" : {
+        "implementation" : "Graphviz",
+        "rankDirection" : "TopBottom",
+        "rankSeparation" : 300,
+        "nodeSeparation" : 300,
+        "edgeSeparation" : 0,
+        "vertices" : false
+      },
+      "externalSoftwareSystemBoundariesVisible" : true,
+      "relationships" : [ {
+        "id" : "5"
+      }, {
+        "id" : "7"
+      } ],
+      "elements" : [ {
+        "id" : "1",
+        "x" : 329,
+        "y" : 208
+      }, {
+        "id" : "3",
+        "x" : 329,
+        "y" : 808
+      }, {
+        "id" : "4",
+        "x" : 329,
+        "y" : 1408
+      } ]
+    } ],
+    "configuration" : {
+      "branding" : { },
+      "styles" : { },
+      "terminology" : { },
+      "metadataSymbols" : "SquareBrackets",
+      "lastSavedView" : "SystemContext-001"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@startuml
+set separator none
+title Spring PetClinic - Containers
+
+top to bottom direction
+
+skinparam {
+  arrowFontSize 10
+  defaultTextAlignment center
+  wrapWidth 200
+  maxMessageSize 100
+}
+
+hide stereotype
+
+skinparam rectangle<<ClinicEmployee>> {
+  BackgroundColor #dddddd
+  FontColor #000000
+  BorderColor #9a9a9a
+  shadowing false
+}
+skinparam rectangle<<SpringPetClinic.Database>> {
+  BackgroundColor #dddddd
+  FontColor #000000
+  BorderColor #9a9a9a
+  shadowing false
+}
+skinparam rectangle<<SpringPetClinic.WebApplication>> {
+  BackgroundColor #dddddd
+  FontColor #000000
+  BorderColor #9a9a9a
+  shadowing false
+}
+skinparam rectangle<<SpringPetClinic>> {
+  BorderColor #9a9a9a
+  FontColor #9a9a9a
+  shadowing false
+}
+
+rectangle "==Clinic Employee\n<size:10>[Person]</size>" <<ClinicEmployee>> as ClinicEmployee
+
+rectangle "Spring PetClinic\n<size:10>[Software System]</size>" <<SpringPetClinic>> {
+  rectangle "==Web Application\n<size:10>[Container]</size>" <<SpringPetClinic.WebApplication>> as SpringPetClinic.WebApplication
+  rectangle "==Database\n<size:10>[Container]</size>" <<SpringPetClinic.Database>> as SpringPetClinic.Database
+}
+
+ClinicEmployee .[#707070,thickness=2].> SpringPetClinic.WebApplication : "<color:#707070>Uses"
+SpringPetClinic.WebApplication .[#707070,thickness=2].> SpringPetClinic.Database : "<color:#707070>Reads from and writes to"
+@enduml

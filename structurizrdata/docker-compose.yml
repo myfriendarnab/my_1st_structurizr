@@ -1,0 +1,27 @@
+version: '3'
+services:
+  structurizr-lite:
+    image: structurizr/lite
+    ports:
+      - "8080:8080"
+    volumes:
+      - /home/myfriendarnab/Data/structurizrdata:/usr/local/structurizr
+    environment:
+      - STRUCTURIZR_WORKSPACE_PATH=structurizrworkspace1
+      - STRUCTURIZR_WORKSPACE_FILENAME=sample
+    networks:
+      - structurizr-network
+    stdin_open: true
+    tty: true
+
+  structurizr-cli:
+    image: structurizr/cli
+    volumes:
+      - /home/myfriendarnab/Data/structurizrdata:/usr/local/structurizr
+    networks:
+      - structurizr-network
+    # command: version
+    command: export -w /usr/local/structurizr --format plantuml --output /usr/local/structurizr/cli/diagrams
+networks:
+  structurizr-network:
+    driver: bridge

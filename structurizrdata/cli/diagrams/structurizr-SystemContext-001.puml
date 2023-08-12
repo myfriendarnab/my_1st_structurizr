@@ -1,0 +1,33 @@
+@startuml
+set separator none
+title Spring PetClinic - System Context
+
+top to bottom direction
+
+skinparam {
+  arrowFontSize 10
+  defaultTextAlignment center
+  wrapWidth 200
+  maxMessageSize 100
+}
+
+hide stereotype
+
+skinparam rectangle<<ClinicEmployee>> {
+  BackgroundColor #dddddd
+  FontColor #000000
+  BorderColor #9a9a9a
+  shadowing false
+}
+skinparam rectangle<<SpringPetClinic>> {
+  BackgroundColor #dddddd
+  FontColor #000000
+  BorderColor #9a9a9a
+  shadowing false
+}
+
+rectangle "==Clinic Employee\n<size:10>[Person]</size>" <<ClinicEmployee>> as ClinicEmployee
+rectangle "==Spring PetClinic\n<size:10>[Software System]</size>" <<SpringPetClinic>> as SpringPetClinic
+
+ClinicEmployee .[#707070,thickness=2].> SpringPetClinic : "<color:#707070>Uses"
+@enduml
