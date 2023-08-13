@@ -19,5 +19,7 @@ docker run -it --rm -v ./structurizrdata:/usr/local/structurizr --name structuri
 ## 1.3. trying for devcontainers
 
 build faliled for docker image - docker build --no-cache -t my-image-name - < ./.devcontainer/Dockerfile.devcontainer
+
 build hanged for docker image - docker build --no-cache -t my-image-name - < ./failed.devcontainer/Dockerfile.devcontainer
+
 debug failed for common-debian.sh - tried to debug from ./failed.devcontainer/testscript.sh
