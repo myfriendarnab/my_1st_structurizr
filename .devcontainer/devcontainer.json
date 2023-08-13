@@ -1,0 +1,23 @@
+{
+    "name": "Structurizr Dev Container",
+    // "dockerFile": "Dockerfile.devcontainer",
+    "dockerComposeFile": "./docker-compose.yml",
+    "service": "devcontainer",
+    "customizations":{
+        "vscode":{
+            "extensions":[
+                "ciarant.vscode-structurizr",
+                "esbenp.prettier-vscode" 
+            ],
+            "settings": {
+              "terminal.integrated.shell.linux": "/bin/bash",
+              "editor.defaultFormatter": "esbenp.prettier-vscode",
+              "editor.formatOnSave": true
+            }
+        }
+    },
+    "workspaceFolder": "/workspace",
+    "shutdownAction": "stopCompose",
+    "remoteUser": "vscode"
+  }
+  

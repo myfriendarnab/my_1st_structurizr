@@ -1,0 +1,23 @@
+version: '3'
+services:
+    devcontainer:
+        build:
+            context: .
+            dockerfile: Dockerfile.devcontainer
+        # command: /bin/bash -c "while sleep 1000; do :; done"
+        tty: true
+    # structurizr-lite:
+    #     image: structurizr/lite
+    #     ports:
+    #         - "8080:8080"
+    #     environment:
+    #         - STRUCTURIZR_WORKSPACE_PATH=structurizrworkspace1
+    #         - STRUCTURIZR_WORKSPACE_FILENAME=sample
+    #     stdin_open: true
+    #     volumes:
+    #       - .:/usr/local/structurizr
+    #     tty: true
+
+    # structurizr-cli:
+    #     image: structurizr/cli
+    #     # command: export -w /usr/local/structurizr --format plantuml --output /usr/local/structurizr/cli/diagrams

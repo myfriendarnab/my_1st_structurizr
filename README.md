@@ -4,9 +4,9 @@ my first trial with structurizr
 
 ## Plans
 
-- try setting with docker images
-- docker compose
-- dev-containers
+- [X] try setting with docker images
+- [ ] docker compose
+- [ ] dev-containers
 
 ## Notes
 
