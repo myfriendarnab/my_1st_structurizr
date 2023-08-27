@@ -1,0 +1,9 @@
+{
+    "files.eol": "\n",
+    "plantuml.diagramsRoot": "diagrams/src",
+    "plantuml.exportOutDir": "diagrams/out",
+    "plantuml.exportFormat": "png",
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+}
