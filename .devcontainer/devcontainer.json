@@ -1,13 +1,23 @@
 {
-    "name": "Structurizr Dev Container",
+    "name": "Arch docs editor",
     // "dockerFile": "Dockerfile.devcontainer",
-    "dockerComposeFile": "./docker-compose.yml",
+    "build": {
+        // "dockerfile": "Dockerfile",
+        "dockerComposeFile": "./docker-compose.yml",
+        // Update 'VARIANT' to pick an Debian version: bullseye, buster
+        // Use bullseye on local arm64/Apple Silicon.
+        "args": { "VARIANT": "bullseye" }
+    },
     "service": "devcontainer",
     "customizations":{
         "vscode":{
             "extensions":[
                 "ciarant.vscode-structurizr",
-                "esbenp.prettier-vscode" 
+                "esbenp.prettier-vscode" ,
+                "bat67.markdown-extension-pack",
+                "joaompinto.vscode-graphviz",
+                "jebbs.plantuml",
+                "vstirbu.vscode-mermaid-preview"
             ],
             "settings": {
               "terminal.integrated.shell.linux": "/bin/bash",
@@ -18,6 +28,10 @@
     },
     "workspaceFolder": "/workspace",
     "shutdownAction": "stopCompose",
-    "remoteUser": "vscode"
+    "remoteUser": "vscode",
+    "features": {
+        "git": "os-provided",
+        "java": "lts",
+        "dotnet": "6.0"
+    }
   }
-  
